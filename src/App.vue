@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header msg="Welcome to Your Vue.js App" />
+    <Header msg="潘多拉高端医疗美容" />
   </div>
 </template>
 
@@ -16,25 +16,26 @@ export default {
 </script>
 
 <style>
-html,
-body,
-div,
-p,
-ul,
-li,
-h1,
-h2,
-h3,
-a,
-span {
+html, body {
   font-family: "Microsoft YaHei";
+  width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
+  font-size: 14px;
+}
+div, p, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
 }
 a {
   text-decoration: none;
 }
 #app {
+  background-color: antiquewhite;
 }
 
 @-webkit-keyframes 'menu1' {
@@ -51,7 +52,6 @@ a {
     -webkit-transform-origin: 40% 40%;
   }
 }
-
 @-webkit-keyframes 'menu2' {
   0% {
     -webkit-transform: scale(1, 1);
@@ -66,5 +66,4 @@ a {
     -webkit-transform-origin: 40% 60%;
   }
 }
-
 </style>
