@@ -38,32 +38,32 @@ a {
   background-color: antiquewhite;
 }
 
-@-webkit-keyframes 'menu1' {
+@keyframes menu1 {
   0% {
-    -webkit-transform: scale(1, 1);
-    -webkit-transform-origin: 40% 40%;
+    transform: scale(1, 1);
+    transform-origin: 40% 40%;
   }
   50% {
-    -webkit-transform: scale(1.12, 1.4);
-    -webkit-transform-origin: 40% 40%;
+    transform: scale(1.12, 1.4);
+    transform-origin: 40% 40%;
   }
   100% {
-    -webkit-transform: scale(1, 1);
-    -webkit-transform-origin: 40% 40%;
+    transform: scale(1, 1);
+    transform-origin: 40% 40%;
   }
 }
-@-webkit-keyframes 'menu2' {
+@keyframes menu2 {
   0% {
-    -webkit-transform: scale(1, 1);
-    -webkit-transform-origin: 40% 60%;
+    transform: scale(1, 1);
+    transform-origin: 40% 60%;
   }
   50% {
-    -webkit-transform: scale(1.12, 1.4);
-    -webkit-transform-origin: 40% 60%;
+    transform: scale(1.12, 1.4);
+    transform-origin: 40% 60%;
   }
   100% {
-    -webkit-transform: scale(1, 1);
-    -webkit-transform-origin: 40% 60%;
+    transform: scale(1, 1);
+    transform-origin: 40% 60%;
   }
 }
 </style>

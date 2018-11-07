@@ -73,9 +73,9 @@ export default {
   opacity: 0.2;
 }
 .menu a:hover span::after {
-  -webkit-animation: "menu1" 0.5s linear;
+  animation: "menu1" 0.5s linear;
 }
 .menu a:hover span::before {
-  -webkit-animation: "menu2" 0.75s linear;
+  animation: "menu2" 0.75s linear;
 }
 </style>
