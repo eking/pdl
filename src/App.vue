@@ -20,6 +20,5 @@ html, body, div, p, ul, li, h1, h2, h3, a, span {
   margin: 0;
   padding: 0;
 }
-#app {
-}
+#app {}
 </style>
