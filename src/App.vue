@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 #app {
-  /* background-color: antiquewhite; */
+  background-color: antiquewhite;
 }
 
 @keyframes menu1 {
