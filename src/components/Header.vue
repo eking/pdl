@@ -1,14 +1,15 @@
 <template>
 <div class="header">
-    <a href="###" class="logo">潘多拉</a>
+    <a href="/" class="logo">潘多拉</a>
     <div class="menu">
         <a href="#/{}"><span>技术</span></a>
         <a href="#/{}"><span>技术</span></a>
         <a href="#/{}"><span>技术</span></a>
-        <a href="#/{}"><span>技术</span></a>
+        <a class="on" href="#/{}"><span>技术</span></a>
     </div>
+    <p class="slogen">{{ tel }}</p>
 
-    <h1 class="slogen">{{ msg }}</h1>
+    <!-- <h1 class="slogen">{{ msg }}</h1> -->
 </div>
 </template>
 
@@ -16,7 +17,7 @@
 export default {
   name: "Header",
   props: {
-    msg: String
+    tel: String
   }
 };
 </script>
@@ -39,24 +40,43 @@ export default {
   text-indent: -999999em;
 }
 .slogen {
+    position: absolute;
+    left: 310px;
+    top: 30px;
+    text-align: left;
     color: #DBB960;
-    line-height: 150px;
-    float: left;
-    margin-left: 50px;
+    line-height: 30px;
+    font: 24px/30px tahoma
+}
+.slogen::before {
+  content: "热线电话：";
+  font:16px/30px "microsoft yahei";
+  vertical-align: 3px
 }
 .menu {
   float: left;
   font-size: 16px;
+  padding-top: 80px;
+  margin-left: 50px;
 }
 .menu a {
   color: #DBB960;
   float: left;
-  line-height: 24px;
-  height: 24px;
+  line-height: 30px;
+  height: 30px;
   border: 1px solid rgba(219, 185, 96, 0.33);
+  border-radius: 4px;
   margin: 10px 0 10px 10px;
-  padding: 0 20px;
+  padding: 0 25px;
   position: relative;
+}
+.menu .on {
+  font-weight: bold;
+  border: none;
+  background-color: #DBB960;
+  color: #FFFFFF;
+  padding: 1px 26px;
+  cursor: default
 }
 .menu span::after, .menu span::before {
   content: "";
@@ -67,7 +87,11 @@ export default {
   height: 100%;
   overflow: hidden;
   border: 1px solid #DBB960;
+  border-radius: 4px;
   opacity: 0;
+}
+.menu .on span::after, .menu .on span::before {
+  display: none;
 }
 .menu a:hover span::after, .menu a:hover span::before {
   opacity: 0.2;

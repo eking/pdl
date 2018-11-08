@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header msg="潘多拉高端医疗美容" />
+    <Header tel="800-820-98765" />
   </div>
 </template>
 
@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 #app {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 
 @keyframes menu1 {
