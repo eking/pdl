@@ -8,7 +8,6 @@
         <a class="on" href="#/{}"><span>技术</span></a>
     </div>
     <p class="slogen">{{ tel }}</p>
-
     <!-- <h1 class="slogen">{{ msg }}</h1> -->
 </div>
 </template>
