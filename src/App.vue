@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
+import Header from "./components/Header.vue"
+import ChannelInfo from './data/channel'
 
 export default {
   name: "app",

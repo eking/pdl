@@ -5,7 +5,7 @@
         <a href="#/{}"><span>技术</span></a>
         <a href="#/{}"><span>技术</span></a>
         <a href="#/{}"><span>技术</span></a>
-        <a class="on" href="#/{}"><span>技术</span></a>
+        <a class="on" href="#/{}"><span>123</span></a>
     </div>
     <p class="slogen">{{ tel }}</p>
     <!-- <h1 class="slogen">{{ msg }}</h1> -->
@@ -13,12 +13,14 @@
 </template>
 
 <script>
-export default {
+
+var Header = {
   name: "Header",
   props: {
     tel: String
   }
 };
+export default Header;
 </script>
 
 <style scoped>

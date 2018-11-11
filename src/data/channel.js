@@ -15,7 +15,7 @@ import zone from "./zone";               //活动专区
 import team from "./team";               //专家团队
 import brand from "./brand";             //品牌介绍
 
-var channles = {
+var channles = [
     liposuction,
     breast,
     nose,
@@ -27,5 +27,5 @@ var channles = {
     zone,
     team,
     brand
-};
+];
 export default channles;
