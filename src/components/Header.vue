@@ -1,119 +1,142 @@
 <template>
 <div class="header">
-    <a href="/" class="logo">潘多拉</a>
-    <div class="menu">
-      <a v-for="(menu, key) in menuList" :key="key" :href="menu.href"><span>{{menu.name}}</span></a>
-    </div>
-    <p class="slogen">{{ tel }}</p>
-    <!-- <h1 class="slogen">{{ msg }}</h1> -->
+  <a href="/" class="logo">潘多拉</a>
+  <p class="tel"><span>{{ tel.name }}:</span> {{ tel.number }}</p>
+  <ul class="nav">
+    <li v-for="(nav, key) in navList" :key="key" >
+      <span v-if="nav.on">{{nav.name}}</span>
+      <a v-else :href="nav.href" v-on:click="changeNav(nav.name)">{{nav.name}}</a>
+    </li>
+  </ul>
 </div>
 </template>
 
 <script>
-import ChannelInfo from '../data/channel'
+import Contact from '../data/infomation/contact'
+import Infomation from '../data/infomation'
 
 var Header = {
   name: "Header",
-  props: {
-    tel: String
-  },
   data() {
     return {
-      menuList: []
+      tel: "",
+      navList: []
     };
   },
   created() {
-    let menus = [];
-    ChannelInfo.forEach(item => {
-      menus.push({
+    this.tel = Contact.contacts.tel;
+    let navs = [];
+    let home = {
+      name: "首页",
+      href: "/",
+      on: true
+    };
+    navs.push(home);
+    Infomation.forEach(item => {
+      navs.push({
         name: item.name,
         href: "#/" + item.key
       })
     })
-    this.menuList = menus;
+    this.navList = navs;
   },
+  methods: {
+    changeNav(name) {
+      let navs = this.navList.map(item => {
+        item.on = false;
+        if (item.name === name) item.on = true;
+        return item;
+      })
+      this.navList = navs;
+    }
+  }
 };
 export default Header;
 </script>
 
 <style scoped>
 .header {
-  height: 150px;
-  padding: 0 50px;
-}
-.header::after {
-  content: "";
-  clear: both;
+  height: 80px;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #DBB960;
+  position: relative;
+  z-index: 9
 }
 .logo {
-  width: 200px;
-  float: left;
+  width: 240px;
+  position: absolute;
+  left: 50px;
+  top: 0;
   height: 150px;
   background: url("../assets/logo.png") center center no-repeat;
   background-size:100% auto;
   text-indent: -999999em;
 }
-.slogen {
-    position: absolute;
-    left: 310px;
-    top: 30px;
-    text-align: left;
+.logo::before {
+  content: "";
+  height: 2px;
+  width: 280px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: -20px;
+  top: 80px;
+}
+.tel {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+    text-align: right;
     color: #DBB960;
     line-height: 30px;
     font: 24px/30px tahoma
 }
-.slogen::before {
-  content: "热线电话：";
+.tel span {
   font:16px/30px "microsoft yahei";
   vertical-align: 3px
 }
-.menu {
-  float: left;
+.nav {
   font-size: 16px;
-  padding-top: 80px;
-  margin-left: 50px;
+  width: 500px;
+  position: absolute;
+  margin-left: -220px;
+  left: 50%;
+  bottom: 2px;
+  text-align: "center"
 }
-.menu a {
-  color: #DBB960;
+.nav li {
   float: left;
+  height: 30px;
+  line-height: 30px
+}
+.nav a {
+  color: #DBB960;
+  background-color: #FFFFFF;
+  display: inline-block;
   line-height: 30px;
   height: 30px;
-  border: 1px solid rgba(219, 185, 96, 0.33);
-  border-radius: 4px;
-  margin: 10px 0 10px 10px;
-  padding: 0 25px;
-  position: relative;
+  border: 2px solid rgba(219, 185, 96, 0);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  margin: 0 10px;
+  padding: 0 20px;
+  transition: all .3s linear 0s
 }
-.menu .on {
-  font-weight: bold;
-  border: none;
-  background-color: #DBB960;
+.nav a:hover {
+  border: 2px solid rgba(219, 185, 96, 0.33);
+  border-bottom: none;
+}
+.nav span {
   color: #FFFFFF;
-  padding: 1px 26px;
-  cursor: default
-}
-.menu span::after, .menu span::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: -2px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid #DBB960;
-  border-radius: 4px;
-  opacity: 0;
-}
-.menu .on span::after, .menu .on span::before {
-  display: none;
-}
-.menu a:hover span::after, .menu a:hover span::before {
-  opacity: 0.2;
-}
-.menu a:hover span::after {
-  animation: "menu1" 0.5s linear infinite;
-}
-.menu a:hover span::before {
-  animation: "menu2" 0.75s linear infinite;
+  background-color: #DBB960;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+  border: 2px solid #DBB960;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  margin: 0 10px;
+  padding: 0 20px;
+  cursor: default;
 }
 </style>

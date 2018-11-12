@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Header tel="800-820-98765" />
+    <Menu />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue"
+import Menu from "./components/Menu.vue"
 
 export default {
   name: "app",
   components: {
-    Header
+    Header,
+    Menu
   }
 };
 </script>
@@ -35,10 +38,11 @@ a {
   text-decoration: none;
 }
 #app {
-  background-color: antiquewhite;
+  background-color: #F0F0F0;
+  height: 1000px;
 }
 
-@keyframes menu1 {
+@keyframes flicker1 {
   0% {
     transform: scale(1, 1);
     transform-origin: 40% 40%;
@@ -52,7 +56,7 @@ a {
     transform-origin: 40% 40%;
   }
 }
-@keyframes menu2 {
+@keyframes flicker2 {
   0% {
     transform: scale(1, 1);
     transform-origin: 40% 60%;
