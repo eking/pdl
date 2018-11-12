@@ -2,10 +2,7 @@
 <div class="header">
     <a href="/" class="logo">潘多拉</a>
     <div class="menu">
-        <a href="#/{}"><span>技术</span></a>
-        <a href="#/{}"><span>技术</span></a>
-        <a href="#/{}"><span>技术</span></a>
-        <a class="on" href="#/{}"><span>123</span></a>
+      <a v-for="(menu, key) in menuList" :key="key" :href="menu.href"><span>{{menu.name}}</span></a>
     </div>
     <p class="slogen">{{ tel }}</p>
     <!-- <h1 class="slogen">{{ msg }}</h1> -->
@@ -13,12 +10,28 @@
 </template>
 
 <script>
+import ChannelInfo from '../data/channel'
 
 var Header = {
   name: "Header",
   props: {
     tel: String
-  }
+  },
+  data() {
+    return {
+      menuList: []
+    };
+  },
+  created() {
+    let menus = [];
+    ChannelInfo.forEach(item => {
+      menus.push({
+        name: item.name,
+        href: "#/" + item.key
+      })
+    })
+    this.menuList = menus;
+  },
 };
 export default Header;
 </script>
@@ -98,9 +111,9 @@ export default Header;
   opacity: 0.2;
 }
 .menu a:hover span::after {
-  animation: "menu1" 0.5s linear;
+  animation: "menu1" 0.5s linear infinite;
 }
 .menu a:hover span::before {
-  animation: "menu2" 0.75s linear;
+  animation: "menu2" 0.75s linear infinite;
 }
 </style>
