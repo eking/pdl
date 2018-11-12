@@ -40,7 +40,7 @@ export default Menu;
   width: 280px;
   border: 2px solid #DBB960; 
   border-top: none;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   padding: 70px 0 10px;
 }
 .menu a {
