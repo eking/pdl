@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Contact from '../data/infomation/contact'
-import Infomation from '../data/infomation'
+import Contact from "../data/infomation/contact";
+import Infomation from "../data/infomation";
 
 var Header = {
   name: "Header",
@@ -36,8 +36,8 @@ var Header = {
       navs.push({
         name: item.name,
         href: "#/" + item.key
-      })
-    })
+      });
+    });
     this.navList = navs;
   },
   methods: {
@@ -46,7 +46,7 @@ var Header = {
         item.on = false;
         if (item.name === name) item.on = true;
         return item;
-      })
+      });
       this.navList = navs;
     }
   }
@@ -58,10 +58,10 @@ export default Header;
 .header {
   height: 80px;
   width: 100%;
-  background-color: #FFFFFF;
-  border-bottom: 2px solid #DBB960;
+  background-color: #ffffff;
+  border-bottom: 2px solid #dbb960;
   position: relative;
-  z-index: 9
+  z-index: 9;
 }
 .logo {
   width: 240px;
@@ -70,14 +70,14 @@ export default Header;
   top: 0;
   height: 150px;
   background: url("../assets/logo.png") center center no-repeat;
-  background-size:100% auto;
+  background-size: 100% auto;
   text-indent: -999999em;
 }
 .logo::before {
   content: "";
   height: 2px;
   width: 280px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: absolute;
   left: -20px;
   top: 80px;
@@ -86,14 +86,17 @@ export default Header;
   position: absolute;
   bottom: 0;
   right: 50px;
-    text-align: right;
-    color: #DBB960;
-    line-height: 30px;
-    font: 24px/30px tahoma
+  text-align: right;
+  color: #dbb960;
+  line-height: 30px;
+  font: 24px/30px tahoma;
+  padding-top: 30px;
+  background: url("../assets/icon.png") 52px 7px no-repeat;
+  background-size: 15% auto;
 }
 .tel span {
-  font:16px/30px "microsoft yahei";
-  vertical-align: 3px
+  font: 16px/30px "microsoft yahei";
+  vertical-align: 3px;
 }
 .nav {
   font-size: 16px;
@@ -102,16 +105,16 @@ export default Header;
   margin-left: -220px;
   left: 50%;
   bottom: 2px;
-  text-align: "center"
+  text-align: "center";
 }
 .nav li {
   float: left;
   height: 30px;
-  line-height: 30px
+  line-height: 30px;
 }
 .nav a {
-  color: #DBB960;
-  background-color: #FFFFFF;
+  color: #dbb960;
+  background-color: #ffffff;
   display: inline-block;
   line-height: 30px;
   height: 30px;
@@ -120,19 +123,19 @@ export default Header;
   border-radius: 4px 4px 0 0;
   margin: 0 10px;
   padding: 0 20px;
-  transition: all .3s linear 0s
+  transition: all 0.3s linear 0s;
 }
 .nav a:hover {
   border: 2px solid rgba(219, 185, 96, 0.33);
   border-bottom: none;
 }
 .nav span {
-  color: #FFFFFF;
-  background-color: #DBB960;
+  color: #ffffff;
+  background-color: #dbb960;
   display: inline-block;
   line-height: 30px;
   height: 30px;
-  border: 2px solid #DBB960;
+  border: 2px solid #dbb960;
   border-bottom: none;
   border-radius: 4px 4px 0 0;
   margin: 0 10px;

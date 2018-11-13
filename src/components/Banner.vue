@@ -12,16 +12,15 @@ var Banner = {
       BannerList: []
     };
   },
-  created() {
-  },
+  created() {}
 };
 export default Banner;
 </script>
 
 <style scoped>
 .banner {
-    width: 100%;
-    height: 294px;
-    overflow: hidden;
+  width: 100%;
+  height: 294px;
+  overflow: hidden;
 }
 </style>

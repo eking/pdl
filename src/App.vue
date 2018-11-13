@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue"
-import Menu from "./components/Menu.vue"
-import Banner from "./components/Banner.vue"
+import Header from "./components/Header.vue";
+import Menu from "./components/Menu.vue";
+import Banner from "./components/Banner.vue";
 
 export default {
   name: "app",
@@ -22,7 +22,8 @@ export default {
 </script>
 
 <style>
-html, body {
+html,
+body {
   font-family: "Microsoft YaHei";
   width: 100%;
   overflow-x: hidden;
@@ -30,18 +31,25 @@ html, body {
   padding: 0;
   font-size: 14px;
 }
-div, p, ul, li, h1, h2, h3 {
+div,
+p,
+ul,
+li,
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
-ul, li {
+ul,
+li {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
 #app {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   height: 1000px;
 }
 

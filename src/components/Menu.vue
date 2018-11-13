@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Products from '../data/product'
+import Products from "../data/product";
 
 var Menu = {
   name: "Menu",
@@ -23,10 +23,10 @@ var Menu = {
       menus.push({
         name: item.name,
         href: "#/" + item.key
-      })
-    })
+      });
+    });
     this.menuList = menus;
-  },
+  }
 };
 export default Menu;
 </script>
@@ -38,25 +38,26 @@ export default Menu;
   left: 28px;
   top: 78px;
   width: 280px;
-  border: 2px solid #DBB960; 
+  border: 2px solid #dbb960;
   border-top: none;
   background: rgba(255, 255, 255, 0.8);
   padding: 70px 0 10px;
 }
 .menu a {
-  color: #FFFFFF;
-  background-color: #DBB960;
+  color: #ffffff;
+  background-color: #dbb960;
   display: inline-block;
   line-height: 30px;
   height: 30px;
   width: 100px;
   text-align: center;
-  border: 2px solid #DBB960;
+  border: 2px solid #dbb960;
   border-radius: 4px;
   margin: 10px 13px 10px 20px;
   position: relative;
 }
-.menu span::after, .menu span::before {
+.menu span::after,
+.menu span::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -64,11 +65,12 @@ export default Menu;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 2px solid #DBB960;
+  border: 2px solid #dbb960;
   border-radius: 4px;
   opacity: 0;
 }
-.menu a:hover span::after, .menu a:hover span::before {
+.menu a:hover span::after,
+.menu a:hover span::before {
   opacity: 0.2;
 }
 .menu a:hover span::after {
