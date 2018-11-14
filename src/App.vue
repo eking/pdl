@@ -22,8 +22,7 @@ export default {
 </script>
 
 <style>
-html,
-body {
+html, body {
   font-family: "Microsoft YaHei";
   width: 100%;
   overflow-x: hidden;
@@ -31,18 +30,11 @@ body {
   padding: 0;
   font-size: 14px;
 }
-div,
-p,
-ul,
-li,
-h1,
-h2,
-h3 {
+div, p, ul, li, h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
-ul,
-li {
+ul, li {
   list-style: none;
 }
 a {
