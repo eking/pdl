@@ -44,7 +44,6 @@ a {
   background-color: #f0f0f0;
   height: 1000px;
 }
-
 @keyframes flicker1 {
   0% {
     transform: scale(1, 1);
