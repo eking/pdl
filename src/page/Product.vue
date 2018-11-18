@@ -143,5 +143,3 @@ export default Header;
   cursor: default;
 }
 </style>
-
-
