@@ -1,7 +1,9 @@
 <template>
-<div class="menu">
-    <a v-for="(menu, key) in menuList" :key="key" :href="menu.href"><span>{{menu.name}}</span></a>
-</div>
+  <div class="menu">
+    <a v-for="(menu, key) in menuList" :key="key" :href="menu.href">
+      <span>{{menu.name}}</span>
+    </a>
+  </div>
 </template>
 
 <script>

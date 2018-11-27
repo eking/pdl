@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <Header tel="800-820-98765" />
-    <Menu />
-    <Banner />
+    <Header tel="800-820-98765"/>
+    <Menus/>
+    <Banner/>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import Menu from "./components/Menu.vue";
+import Menus from "./components/Menu.vue";
 import Banner from "./components/Banner.vue";
 
 export default {
   name: "app",
   components: {
     Header,
-    Menu,
+    Menus,
     Banner
   }
 };

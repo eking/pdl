@@ -1,18 +1,25 @@
 <template>
-<div class="banner">
-    <img src="../assets/banner.jpg" alt="">
-</div>
+  <Slider height="294px" animation="fade">
+    <SliderItem><img src="../assets/banner.jpg" alt></SliderItem>
+    <SliderItem><img src="../assets/banner1.jpg" alt></SliderItem>
+    <SliderItem><img src="../assets/banner2.jpg" alt></SliderItem>
+  </Slider>
 </template>
 
 <script>
+import { Slider, SliderItem } from "vue-easy-slider"
+
 var Banner = {
   name: "Banner",
+  components: {
+    Slider,
+    SliderItem
+  },
   data() {
     return {
-      BannerList: []
+      bannerList: []
     };
-  },
-  created() {}
+  }
 };
 export default Banner;
 </script>
