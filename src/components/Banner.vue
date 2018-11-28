@@ -8,7 +8,6 @@
 
 <script>
 import { Slider, SliderItem } from "vue-easy-slider"
-
 var Banner = {
   name: "Banner",
   components: {
