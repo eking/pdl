@@ -61,7 +61,7 @@ export default Header;
   background-color: #ffffff;
   border-bottom: 2px solid #dbb960;
   position: relative;
-  z-index: 9;
+  z-index: 101;
 }
 .logo {
   width: 240px;

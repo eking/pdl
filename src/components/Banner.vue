@@ -1,5 +1,5 @@
 <template>
-  <Slider height="294px" animation="fade">
+  <Slider height="296px" animation="fade">
     <SliderItem><img src="../assets/banner.jpg" alt></SliderItem>
     <SliderItem><img src="../assets/banner1.jpg" alt></SliderItem>
     <SliderItem><img src="../assets/banner2.jpg" alt></SliderItem>
@@ -8,6 +8,7 @@
 
 <script>
 import { Slider, SliderItem } from "vue-easy-slider"
+
 var Banner = {
   name: "Banner",
   components: {
@@ -26,7 +27,7 @@ export default Banner;
 <style scoped>
 .banner {
   width: 100%;
-  height: 294px;
+  height: 296px;
   overflow: hidden;
 }
 </style>

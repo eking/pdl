@@ -36,9 +36,9 @@ export default Menu;
 <style scoped>
 .menu {
   position: absolute;
-  z-index: 8;
+  z-index: 100;
   left: 28px;
-  top: 78px;
+  top: 80px;
   width: 280px;
   border: 2px solid #dbb960;
   border-top: none;
