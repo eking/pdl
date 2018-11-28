@@ -58,10 +58,10 @@ export default Header;
 .header {
   height: 80px;
   width: 100%;
-  background-color: #ffffff;
+  background-color:#ffffff;
   border-bottom: 2px solid #dbb960;
   position: relative;
-  z-index: 101;
+  z-index: 102
 }
 .logo {
   width: 240px;
