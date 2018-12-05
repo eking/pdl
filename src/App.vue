@@ -3,6 +3,8 @@
     <Header tel="800-820-98765"/>
     <Menus/>
     <Banner/>
+    <Footer/>
+    <Sider/>
   </div>
 </template>
 
@@ -10,13 +12,17 @@
 import Header from "./components/Header.vue";
 import Menus from "./components/Menu.vue";
 import Banner from "./components/Banner.vue";
+import Footer from "./components/Footer.vue";
+import Sider from "./components/Sider.vue";
 
 export default {
   name: "app",
   components: {
     Header,
     Menus,
-    Banner
+    Banner,
+    Footer,
+    Sider
   }
 };
 </script>
