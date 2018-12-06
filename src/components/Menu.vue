@@ -41,8 +41,7 @@ export default Menu;
   top: 80px;
   width: 280px;
   border: 2px solid #dbb960;
-  border-top: none;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   padding: 70px 0 10px;
 }
 .menu a {

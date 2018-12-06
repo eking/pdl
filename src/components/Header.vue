@@ -58,7 +58,7 @@ export default Header;
 .header {
   height: 80px;
   width: 100%;
-  background-color:#ffffff;
+  background-color:#000000;
   border-bottom: 2px solid #dbb960;
   position: relative;
   z-index: 102
@@ -77,7 +77,7 @@ export default Header;
   content: "";
   height: 2px;
   width: 280px;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: -20px;
   top: 80px;
@@ -114,7 +114,7 @@ export default Header;
 }
 .nav a {
   color: #dbb960;
-  background-color: #ffffff;
+  background-color: #000000;
   display: inline-block;
   line-height: 30px;
   height: 30px;

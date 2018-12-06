@@ -1,6 +1,6 @@
 <template>
 <div class="banner">
-  <Slider height="298px" animation="fade">
+  <Slider height="500px" animation="fade">
     <SliderItem><img src="../assets/banner.jpg" alt></SliderItem>
     <SliderItem><img src="../assets/banner1.jpg" alt></SliderItem>
     <SliderItem><img src="../assets/banner2.jpg" alt></SliderItem>
@@ -29,9 +29,8 @@ export default Banner;
 <style scoped>
 .banner {
   width: 100%;
-  height: 298px;
+  height: 500px;
   overflow: hidden;
-  position:relative;
-  top:-2px
+  position:relative
 }
 </style>
