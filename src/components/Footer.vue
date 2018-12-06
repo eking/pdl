@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p class="copyright">Copyright © 2018 潘多拉 All Rights Reserved</p>
+    <p class="copyright">Copyright &copy; 2018 潘多拉高端医疗美容医院</p>
   </div>
 </template>
 
