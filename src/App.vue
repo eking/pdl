@@ -2,6 +2,7 @@
   <div id="app">
     <Header tel="800-820-98765"/>
     <Banner/>
+    <Menu/>
     <Footer/>
     <Sider/>
   </div>
@@ -10,6 +11,7 @@
 <script>
 import Header from "./components/Header.vue";
 import Banner from "./components/Banner.vue";
+import Menu from "./components/Menu.vue";
 import Footer from "./components/Footer.vue";
 import Sider from "./components/Sider.vue";
 
@@ -18,6 +20,7 @@ export default {
   components: {
     Header,
     Banner,
+    Menu,
     Footer,
     Sider
   }
