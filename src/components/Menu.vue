@@ -4,7 +4,7 @@
             <li v-for="(menu, key) in menuList" :key="key">
                 <h3 class="title">{{menu.name}}</h3>
                 <div class="box">
-                    <a v-for="(item, i) in menu.list" :key="i" :href="'#/' + menu.name + '/' + i">{{item}}</a>
+                    <a v-for="(item, i) in menu.list" :key="i" :href="'#/' + menu.item + '/' + i">{{item}}</a>
                 </div>
             </li>
         </ul>
@@ -39,7 +39,8 @@ export default Menu;
 .menu {
     padding: 0 28px;
     background-color: #000000;
-    color: #ffffff
+    color: #ffffff;
+    border-bottom: #dbb960 2px solid
 }
 .menu::after {
     content: "";
@@ -63,10 +64,12 @@ export default Menu;
 }
 .list .box {
     position: absolute;
-    bottom: 0;
+    top: -50px;
     left: 0;
     height: 50px;
-    line-height: 50px
+    line-height: 50px;
+    white-space:nowrap;
+    display: none
 }
 .list li:hover .title {
     color: #dbb960

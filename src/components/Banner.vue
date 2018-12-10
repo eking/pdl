@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
     <div class="menu">
       <a v-for="(menu, key) in menuList" :key="key" :href="menu.href">
         <span>{{menu.name}}</span>
@@ -51,6 +51,11 @@ export default Banner;
 </script>
 
 <style scoped>
+.wrap {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
 .banner {
   width: 100%;
   height: 500px;
@@ -61,7 +66,7 @@ export default Banner;
   position: absolute;
   z-index: 100;
   left: 28px;
-  top: 80px;
+  top: -2px;
   width: 280px;
   border: 2px solid #dbb960;
   background: rgba(0, 0, 0, 0.8);
