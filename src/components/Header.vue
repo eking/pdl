@@ -35,7 +35,7 @@ var Header = {
     Infomation.forEach(item => {
       navs.push({
         name: item.name,
-        href: "/" + item.key
+        href: "#/" + item.key
       });
     });
     this.navList = navs;
