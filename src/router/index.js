@@ -13,7 +13,7 @@ const router = new Router({
             component: App
         },
         {
-            path: '/#/zone',
+            path: '/zone',
             component: Product
         },
         {
