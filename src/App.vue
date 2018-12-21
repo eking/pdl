@@ -3,6 +3,11 @@
     <Header tel="800-820-98765"/>
     <Banner/>
     <Menu/>
+    <div class="item">
+      <div class="item-box">
+        <p>内容内容内容内容内容内容内容内容</p>
+      </div>
+    </div>
     <Footer/>
     <Sider/>
   </div>
@@ -77,5 +82,18 @@ a {
     transform: scale(1, 1);
     transform-origin: 40% 60%;
   }
+}
+
+.item {
+  height: 500px;
+  width: 100%;
+  background-color: #000000
+}
+.item-box {
+  width: 90%;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center
 }
 </style>
