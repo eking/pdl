@@ -3,6 +3,7 @@
     <Header />
     <Banner />
     <Menu />
+    <Item />
     <Footer />
     <Sider />
   </div>
@@ -12,6 +13,7 @@
 import Header from "./components/Header.vue";
 import Banner from "./components/Banner.vue";
 import Menu from "./components/Menu.vue";
+import Item from "./components/Item.vue";
 import Footer from "./components/Footer.vue";
 import Sider from "./components/Sider.vue";
 
@@ -21,6 +23,7 @@ export default {
     Header,
     Banner,
     Menu,
+    Item,
     Footer,
     Sider
   }

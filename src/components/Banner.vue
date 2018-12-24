@@ -18,15 +18,7 @@
 <script>
 import { Slider, SliderItem } from "vue-easy-slider";
 import Products from "../data/product";
-import Banner0 from "../assets/banner.jpg";
-import Banner1 from "../assets/banner1.jpg";
-import Banner2 from "../assets/banner2.jpg";
-import Banner3 from "../assets/banner3.jpg";
-import Banner4 from "../assets/banner4.jpg";
-import Banner5 from "../assets/banner5.jpg";
-import Banner6 from "../assets/banner6.jpg";
-import Banner7 from "../assets/banner7.jpg";
-import Banner8 from "../assets/banner8.jpg";
+import BannerList from "../data/banner";
 var Banner = {
   name: "Banner",
   components: {
@@ -35,21 +27,12 @@ var Banner = {
   },
   data() {
     return {
-      bannerList: [
-        Banner0,
-        Banner1,
-        Banner2,
-        Banner3,
-        Banner4,
-        Banner5,
-        Banner6,
-        Banner7,
-        Banner8,
-      ],
+      bannerList: [],
       menuList: []
     };
   },
   created() {
+    this.bannerList = BannerList;
     let menus = [];
     Products.forEach(item => {
       menus.push({

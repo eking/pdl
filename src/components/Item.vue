@@ -1,9 +1,9 @@
 <template>
     <div class="item">
       <dl class="box">
-          <dt class="title"></dt>
-          <dd class="img"></dd>
-          <dd class="des"></dd>
+          <dt class="title">活动专区</dt>
+          <dd class="img">活动专区</dd>
+          <dd class="des">活动专区</dd>
       </dl>
     </div>
 </template>
@@ -25,9 +25,8 @@ export default Item;
 
 <style scoped>
 .item {
-  width: 100%;
   background-color: rgba(219, 185, 96, 0.33);
-  padding: 50px;
+  padding: 50px 100px;
 }
 .box::after {
     content: "";
