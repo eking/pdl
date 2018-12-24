@@ -68,7 +68,7 @@ export default Menu;
     padding: 0;
     position: absolute;
     float: left;
-    bottom: 48px;
+    top: 48px;
     left: -4px;
     background-color: rgba(0, 0, 0, 0.8);
     border: #000000 2px solid;
