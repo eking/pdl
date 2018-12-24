@@ -1,15 +1,10 @@
 <template>
   <div id="app">
-    <Header tel="800-820-98765"/>
-    <Banner/>
-    <Menu/>
-    <div class="item">
-      <div class="item-box">
-        <p>内容内容内容内容内容内容内容内容</p>
-      </div>
-    </div>
-    <Footer/>
-    <Sider/>
+    <Header />
+    <Banner />
+    <Menu />
+    <Footer />
+    <Sider />
   </div>
 </template>
 
@@ -41,7 +36,7 @@ html, body {
   padding: 0;
   font-size: 14px;
 }
-div, p, ul, li, h1, h2, h3 {
+div, p, ul, li, h1, h2, h3, dl, dt, dd {
   margin: 0;
   padding: 0;
 }
@@ -82,18 +77,5 @@ a {
     transform: scale(1, 1);
     transform-origin: 40% 60%;
   }
-}
-
-.item {
-  height: 500px;
-  width: 100%;
-  background-color: #000000
-}
-.item-box {
-  width: 90%;
-  margin: 0 auto;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center
 }
 </style>
