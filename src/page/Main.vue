@@ -1,8 +1,14 @@
 <template>
-  <div id="product">
+  <div id="main">
     <vHeader />
     <vBanner pics="show"/>
     <vMenu />
+    <vItem />
+    <vItem />
+    <vItem />
+    <vItem />
+    <vItem />
+    <vItem />
     <vItem />
     <vFooter />
     <vSider />
@@ -18,7 +24,7 @@ import vFooter from "../components/Footer";
 import vSider from "../components/Sider";
 
 export default {
-  name: "product",
+  name: "main",
   components: {
     vHeader,
     vBanner,

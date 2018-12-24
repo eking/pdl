@@ -1,14 +1,17 @@
 <template>
-<div class="header">
-  <a href="/" class="logo">潘多拉</a>
-  <p class="tel"><span>{{ tel.name }}:</span> {{ tel.number }}</p>
-  <ul class="nav">
-    <li v-for="(nav, key) in navList" :key="key" >
-      <span v-if="nav.on">{{nav.name}}</span>
-      <a v-else :href="nav.href" v-on:click="changeNav(nav.name)">{{nav.name}}</a>
-    </li>
-  </ul>
-</div>
+  <div class="header">
+    <a href="/" class="logo">潘多拉</a>
+    <p class="tel">
+      <span>{{ tel.name }}:</span>
+      {{ tel.number }}
+    </p>
+    <ul class="nav">
+      <li v-for="(nav, key) in navList" :key="key">
+        <span v-if="nav.href === path">{{nav.name}}</span>
+        <router-link v-else :to="nav.href">{{nav.name}}</router-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -17,37 +20,34 @@ import Infomation from "../data/infomation";
 
 var Header = {
   name: "Header",
+  props: ["on"],
   data() {
     return {
       tel: "",
-      navList: []
+      navList: [],
+      path: "/"
     };
   },
   created() {
+    this.path = this.$route.fullPath;
     this.tel = Contact.contacts.tel;
     let navs = [];
     let home = {
       name: "首页",
-      href: "/",
-      on: true
+      href: "/"
     };
     navs.push(home);
     Infomation.forEach(item => {
       navs.push({
         name: item.name,
-        href: "#/" + item.key
+        href: "/info#" + item.key
       });
     });
     this.navList = navs;
   },
-  methods: {
-    changeNav(name) {
-      let navs = this.navList.map(item => {
-        item.on = false;
-        if (item.name === name) item.on = true;
-        return item;
-      });
-      this.navList = navs;
+  watch: {
+    $route(to, from) {
+      this.path = to.fullPath;
     }
   }
 };
@@ -58,10 +58,10 @@ export default Header;
 .header {
   height: 80px;
   width: 100%;
-  background-color:#000000;
+  background-color: #000000;
   border-bottom: 2px solid #dbb960;
   position: relative;
-  z-index: 102
+  z-index: 102;
 }
 .logo {
   width: 240px;

@@ -1,11 +1,11 @@
 <template>
   <div class="wrap">
     <div class="menu">
-      <a v-for="(menu, key) in menuList" :key="key" :href="menu.href">
+      <router-link v-for="(menu, key) in menuList" :key="key" :to="menu.href">
         <span>{{menu.name}}</span>
-      </a>
+      </router-link>
     </div>
-    <div class="banner">
+    <div class="banner" v-if="pics==='show'">
       <Slider height="500px" animation="fade">
         <SliderItem v-for="(banner, key) in bannerList" :key="key">
           <img :src="banner" alt>
@@ -25,6 +25,7 @@ var Banner = {
     Slider,
     SliderItem
   },
+  props: ["pics"],
   data() {
     return {
       bannerList: [],
@@ -37,7 +38,7 @@ var Banner = {
     Products.forEach(item => {
       menus.push({
         name: item.name,
-        href: "#/" + item.key
+        href: "/product#" + item.key
       });
     });
     this.menuList = menus;
