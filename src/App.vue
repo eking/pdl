@@ -4,6 +4,12 @@
     <Banner />
     <Menu />
     <Item />
+    <Item />
+    <Item />
+    <Item />
+    <Item />
+    <Item />
+    <Item />
     <Footer />
     <Sider />
   </div>
@@ -51,7 +57,6 @@ a {
 }
 #app {
   background-color: #f0f0f0;
-  height: 1000px;
 }
 @keyframes flicker1 {
   0% {

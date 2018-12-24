@@ -13,7 +13,7 @@ import Banner6 from "../assets/banner6.jpg";
 import Banner7 from "../assets/banner7.jpg";
 import Banner8 from "../assets/banner8.jpg";
 
-var banner = [
+var bannerList = [
     Banner0,
     Banner1,
     Banner2,
@@ -24,4 +24,4 @@ var banner = [
     Banner7,
     Banner8
 ];
-export default banner;
+export default bannerList;
