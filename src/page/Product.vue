@@ -1,7 +1,7 @@
 <template>
   <div id="product">
     <vHeader />
-    <vBanner pics="show"/>
+    <vBanner />
     <vMenu />
     <vItem />
     <vFooter />
@@ -29,6 +29,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

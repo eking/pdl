@@ -5,7 +5,7 @@
         <span>{{menu.name}}</span>
       </router-link>
     </div>
-    <div class="banner" v-if="pics==='show'">
+    <div class="banner">
       <Slider height="500px" animation="fade">
         <SliderItem v-for="(banner, key) in bannerList" :key="key">
           <img :src="banner" alt>
@@ -25,7 +25,6 @@ var Banner = {
     Slider,
     SliderItem
   },
-  props: ["pics"],
   data() {
     return {
       bannerList: [],

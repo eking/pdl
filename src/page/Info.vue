@@ -1,7 +1,7 @@
 <template>
   <div id="info">
     <vHeader />
-    <vBanner pics="hide" />
+    <vBanner />
     <vItem />
     <vFooter />
     <vSider />
@@ -26,55 +26,3 @@ export default {
   }
 };
 </script>
-
-<style>
-html, body {
-  font-family: "Microsoft YaHei";
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-}
-div, p, ul, li, h1, h2, h3, dl, dt, dd {
-  margin: 0;
-  padding: 0;
-}
-ul, li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-#app {
-  background-color: #eeeeee;
-}
-@keyframes flicker1 {
-  0% {
-    transform: scale(1, 1);
-    transform-origin: 40% 40%;
-  }
-  50% {
-    transform: scale(1.12, 1.4);
-    transform-origin: 40% 40%;
-  }
-  100% {
-    transform: scale(1, 1);
-    transform-origin: 40% 40%;
-  }
-}
-@keyframes flicker2 {
-  0% {
-    transform: scale(1, 1);
-    transform-origin: 40% 60%;
-  }
-  50% {
-    transform: scale(1.12, 1.4);
-    transform-origin: 40% 60%;
-  }
-  100% {
-    transform: scale(1, 1);
-    transform-origin: 40% 60%;
-  }
-}
-</style>

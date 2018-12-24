@@ -1,14 +1,8 @@
 <template>
-  <div id="main">
+  <div id="home">
     <vHeader />
-    <vBanner pics="show"/>
+    <vBanner />
     <vMenu />
-    <vItem />
-    <vItem />
-    <vItem />
-    <vItem />
-    <vItem />
-    <vItem />
     <vItem />
     <vFooter />
     <vSider />
@@ -24,7 +18,7 @@ import vFooter from "../components/Footer";
 import vSider from "../components/Sider";
 
 export default {
-  name: "main",
+  name: "home",
   components: {
     vHeader,
     vBanner,
@@ -35,6 +29,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

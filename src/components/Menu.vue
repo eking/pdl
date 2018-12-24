@@ -41,7 +41,8 @@ export default Menu;
     background-color: #000000;
     color: #ffffff;
     border-bottom: #dbb960 2px solid;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 120
 }
 .menu::after {
