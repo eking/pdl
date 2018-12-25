@@ -12,4 +12,9 @@ var infomations = [
     team,
     brand
 ];
+infomations.unshift({
+    id: 1,
+    name: "首页",
+    key: ""
+});
 export default infomations;

@@ -1,5 +1,5 @@
 <template>
-    <div class="menu">
+    <div id="menu" class="menu">
         <ul class="list">
             <li v-for="(menu, key) in menuList" :key="key">
                 <h3 class="title">{{menu.name}}</h3>
@@ -37,13 +37,12 @@ export default Menu;
 
 <style scoped>
 .menu {
+    position: sticky;
+    top: 0;
     padding: 0 28px;
     background-color: #000000;
     color: #ffffff;
-    border-bottom: #dbb960 2px solid;
-    position: sticky;
-    top: 0;
-    z-index: 120
+    border-bottom: #dbb960 2px solid
 }
 .menu::after {
     content: "";

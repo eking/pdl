@@ -1,5 +1,5 @@
 <template>
-  <div id="product">
+  <div id="zone">
     <vItem />
   </div>
 </template>
@@ -8,7 +8,7 @@
 import vItem from "../components/Item";
 
 export default {
-  name: "product",
+  name: "zone",
   components: {
     vItem
   }

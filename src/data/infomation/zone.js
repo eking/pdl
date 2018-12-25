@@ -8,7 +8,7 @@ var zone = {
     name: "活动专区",
     key: "zone",
     paragraph: [
-        {}
+        { }
     ]
 };
 

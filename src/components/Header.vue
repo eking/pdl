@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div id="header" class="header">
     <a href="/" class="logo">潘多拉</a>
     <p class="tel">
       <span>{{ tel.name }}:</span>
@@ -32,15 +32,10 @@ var Header = {
     this.path = this.$route.fullPath;
     this.tel = Contact.contacts.tel;
     let navs = [];
-    let home = {
-      name: "首页",
-      href: "/"
-    };
-    navs.push(home);
     Infomation.forEach(item => {
       navs.push({
         name: item.name,
-        href: "/info#" + item.key
+        href: "/" + item.key
       });
     });
     this.navList = navs;
@@ -61,7 +56,6 @@ export default Header;
   background-color: #000000;
   border-bottom: 2px solid #dbb960;
   position: relative;
-  z-index: 102;
 }
 .logo {
   width: 240px;

@@ -1,5 +1,5 @@
 <template>
-  <ul class="sider">
+  <ul id="sider" class="sider">
     <li>微信</li>
     <li>QQ</li>
     <li>地址</li>
@@ -22,8 +22,7 @@ export default Sider;
 .sider {
   position: fixed;
   right: 10px;
-  bottom: 50px;
-  z-index: 1000
+  bottom: 50px
 }
 .sider li {
   width: 50px;
