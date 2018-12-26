@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div id="banner" class="wrap">
     <div class="menu">
       <router-link v-for="(menu, key) in menuList" :key="key" :to="menu.href">
         <span>{{menu.name}}</span>

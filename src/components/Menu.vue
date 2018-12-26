@@ -51,7 +51,8 @@ export default Menu;
     clear: both;
 }
 .list {
-    float: left;
+    width: 1000px;
+    margin: 0 auto;
 }
 .list li {
     float: left;

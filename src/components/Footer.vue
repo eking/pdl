@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div id="footer" class="footer">
     <p class="copyright">Copyright &copy; 2018 潘多拉高端医疗美容医院</p>
   </div>
 </template>

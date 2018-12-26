@@ -36,10 +36,14 @@ export default {
 </script>
 
 <style>
+:root {
+  --width: 1000px;
+}
 html,
 body {
   font-family: "Microsoft YaHei";
   width: 100%;
+  min-width: var(--width);
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -54,6 +58,12 @@ ul, li {
 }
 a {
   text-decoration: none;
+}
+#banner, #footer {
+  min-width: var(--width);
+}
+#app .item {
+  width: var(--width);
 }
 #app {
   background-color: #eeeeee;

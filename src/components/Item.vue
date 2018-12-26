@@ -38,7 +38,7 @@ export default Item;
 
 <style scoped>
 .item {
-  padding: 0 100px;
+  margin: 0 auto;
 }
 .box {
     background-color: #ffffff;
