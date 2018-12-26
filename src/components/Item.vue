@@ -99,11 +99,11 @@ export default Item;
    line-height: 26px;
    margin-bottom: 10px;
 }
-.des p::after {
+/* .des p::after {
     content: "";
     display: block;
     clear: both;
-}
+} */
 .des .no-indent {
     text-indent: 0;
 }

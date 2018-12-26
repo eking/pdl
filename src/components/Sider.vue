@@ -22,7 +22,7 @@ export default Sider;
 .sider {
   position: fixed;
   right: 10px;
-  bottom: 50px
+  bottom: 10px
 }
 .sider li {
   width: 50px;

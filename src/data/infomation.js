@@ -1,5 +1,5 @@
 /*  --------------------
- *  infomation 公司信息汇总汇总.
+ *  infomation 公司信息汇总.
  *  The data collection of company infomations.
  *  Owner Eking <ekingwee@gmail.com>
  *  --------------------  */

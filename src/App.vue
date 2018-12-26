@@ -62,7 +62,7 @@ a {
   z-index: 198;
 }
 #sider {
-  z-index: 200;
+  z-index: 999;
 }
 #menu {
   z-index: 199;

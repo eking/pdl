@@ -3,10 +3,10 @@
  *  The data of brand.
  *  Owner Eking <ekingwee@gmail.com>
  *  --------------------  */
-import img from "../../assets/about4.jpg"
+import img from "../../assets/about.jpg"
 import img2 from "../../assets/about5.jpg"
-import img3 from "../../assets/about6.jpg"
-import img4 from "../../assets/about7.jpg"
+import img3 from "../../assets/about4.jpg"
+import img4 from "../../assets/about2.jpg"
 
 var brand = {
     id: 300,
