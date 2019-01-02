@@ -37,7 +37,7 @@ var Banner = {
     Products.forEach(item => {
       menus.push({
         name: item.name,
-        href: "/product#" + item.key
+        href: "/product/" + item.key
       });
     });
     this.menuList = menus;

@@ -8,16 +8,16 @@ var liposuction = {
     name: "吸脂塑性",
     key: "liposuction",
     list: ["面部脂肪填充", "面部吸脂", "手臂吸脂", "腰部吸脂", "臀部吸脂", "腿部吸脂", "脂肪移植"],
-    paragraph: [
+    details: [
         {
             type: "text",
             title: "适用人群",
-            describe: "单纯性肥胖者丨局部比例失调丨中年“发福”丨顽固性肥胖者"
+            describe: [`单纯性肥胖者`, `局部比例失调`, `中年“发福”`, `顽固性肥胖者`]
         },
         {
             type: "sketch",
             title: "医院特色",
-            describe: "水动力环形吸脂技术",
+            describe: ["水动力环形吸脂技术"],
             img: "../assets/liposuction1.jpg"
         },
         {
@@ -58,7 +58,10 @@ var liposuction = {
                 }
             ]
         }
-    ]
+    ],
+    items: [
+
+    ],
 };
 
 export default liposuction;
