@@ -29,7 +29,6 @@ export default {
       info.single = item.paragraph && item.paragraph.length < 2;
       return info;
     });
-    console.log(this.infoList);
   }
 };
 </script>
