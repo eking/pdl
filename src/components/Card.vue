@@ -13,8 +13,8 @@
 </template>
 
 <script>
-var Subject = {
-  name: "Subject",
+var Card = {
+  name: "Card",
   props: ["datas"],
   data() {
     return {
@@ -30,7 +30,7 @@ var Subject = {
     this.infos = { id, name, key, list };
   }
 };
-export default Subject;
+export default Card;
 </script>
 
 <style scoped>

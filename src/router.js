@@ -30,11 +30,13 @@ const router = new Router({
             component: Home
         },
         {
-            path: '/product/:id',
+            path: '/product/:channel',
+            name: 'product',
             component: Product
         },
         {
-            path: '/:channel/:name',
+            path: '/product/:channel/:id',
+            name: 'detail',
             component: Detail
         }
     ]

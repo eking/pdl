@@ -1,17 +1,17 @@
 <template>
   <div id="detail">
-    <Subject :datas="datas" />
+    <Card :datas="datas" />
   </div>
 </template>
 
 <script>
-import Subject from "../components/Subject";
+import Card from "../components/Card";
 import datas from "../data/product/liposuction";
 
 export default {
   name: "detail",
   components: {
-    Subject
+    Card
   },
   data() {
     return {
@@ -20,11 +20,6 @@ export default {
   },
   created() {
     this.datas = datas;
-  },
-  watch: {
-    $route(to, from) {
-      console.log(to.params.name);
-    }
   }
 };
 </script>
