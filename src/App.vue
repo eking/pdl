@@ -27,6 +27,7 @@ export default {
   },
   watch: {
     $route(to, from) {
+      console.log(to.name);
       if (to.name === "home") window.scrollTo(0, 0);
       else window.scrollTo(0, 583);
     }

@@ -4,7 +4,7 @@
             <li v-for="(menu, key) in menuList" :key="key">
                 <h3 class="title">{{menu.name}}</h3>
                 <div class="box">
-                    <a v-for="(item, i) in menu.list" :key="i" :href="'#/' + menu.item + '/' + i">{{item}}</a>
+                    <a v-for="(item, i) in menu.list" :key="i" :href="'/' + menu.item + '/' + i">{{item}}</a>
                 </div>
             </li>
         </ul>
