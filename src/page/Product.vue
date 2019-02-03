@@ -20,6 +20,6 @@ export default {
   },
   created() {
     this.datas = datas;
-  }。。。
+  }
 };
 </script>
