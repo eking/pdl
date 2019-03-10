@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circle lights</title>
+    <style>
+        html, body, ul, li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #222
+        }
+
+        ul {
+            margin: 30px auto;
+            background-color: #000000;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        li {
+            list-style: none;
+            border-radius: 50%;
+            position: absolute
+        }
+
+        li.true {
+            background-color: aliceblue;
+            box-shadow: 0 0 10px antiquewhite;
+        }
+
+        li.false {
+            background-color: gray
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="lights"></ul>
+    <script>
+        let boxSize = 600, liSize = 16, len = 100;
+        let r = boxSize / 2, a = 360 / len, ahd = a * Math.PI / 180;
+        let mid = (boxSize - liSize) / 2;
+
+        let box = document.getElementById("lights");
+        box.style.width = boxSize + 'px';
+        box.style.height = boxSize + 'px';
+
+        // init list data
+        let list = [], nodeList = [], total = 0;
+        for (let i = 0; i < len; i++) {
+            let rdm = Math.random() * 10;
+            let cls = rdm > 5;
+            list.push(cls);
+            let li = document.createElement('li');
+            li.className = cls;
+            li.style.width = liSize + 'px';
+            li.style.height = liSize + 'px';
+            let left = Math.sin((ahd * i)) * r + mid;
+            let top = Math.cos((ahd * i)) * r + mid;
+            li.style.left = left + 'px';
+            li.style.top = top + 'px';
+            li.setAttribute("data-index", i);
+            box.append(li);
+        }
+        nodeList = box.childNodes;
+        box.addEventListener('click', ev => {
+            let tag = ev.target;
+            if (tag.tagName.toLowerCase() == 'li') {
+                let index = tag.dataset.index;
+                press(list, index);
+            }
+        }, true);
+
+        function press(list, n) {
+            total ++;
+            n = parseInt(n);
+            let len = list.length;
+            let pre = n - 1, next = n + 1; 
+            if (n === 0) pre = len - 1;
+            if (next === len) next = 0;
+            
+            list[pre] = !(list[pre]);
+            list[n] = !(list[n]);
+            list[next] = !(list[next]);
+            nodeList[pre].className = list[pre];
+            nodeList[n].className = list[n];
+            nodeList[next].className = list[next];
+            let passGame = check(list);
+            if (passGame) alert(total + '步');
+        };
+
+        function check(list) {
+            let flag = true;
+            list.forEach(a => {
+                if (!a) flag = false;
+            });
+            return flag;
+        }
+    </script>
+</body>
+</html>
