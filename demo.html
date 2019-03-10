@@ -43,6 +43,7 @@
 </head>
 
 <body>
+    <span id="total"></span>
     <ul id="lights"></ul>
     <script>
         let boxSize = 600, liSize = 16, len = 100;
@@ -93,6 +94,7 @@
             nodeList[pre].className = list[pre];
             nodeList[n].className = list[n];
             nodeList[next].className = list[next];
+            document.getElementById("total").innerText(total);
             let passGame = check(list);
             if (passGame) alert(total + '步');
         };
