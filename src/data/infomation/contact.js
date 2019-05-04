@@ -10,12 +10,12 @@ var contact = {
         tel: {
             type: "Telephone",
             name: "美容热线",
-            number: "888-888-88888"
+            number: "0771-4503211"
         },
         add: {
             type: "Address",
             name: "地址",
-            text: "南宁市万达国际"
+            text: "南宁市青秀区金湖路58-2号军创大厦3楼(潘多拉整形)"
         },
         qq: {
             type: "QQ",
